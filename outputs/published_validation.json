@@ -1,0 +1,87 @@
+{
+  "threshold": 0.5,
+  "n_rows": 233,
+  "confusion_matrix": {
+    "TP": 90,
+    "FN": 56,
+    "TN": 59,
+    "FP": 28
+  },
+  "pooled_auroc": 0.7037080774681153,
+  "checks": {
+    "five_fold_files": {
+      "passed": true,
+      "detail": [
+        "fold0_test_predictions.csv",
+        "fold1_test_predictions.csv",
+        "fold2_test_predictions.csv",
+        "fold3_test_predictions.csv",
+        "fold4_test_predictions.csv"
+      ]
+    },
+    "unique_patients": {
+      "passed": true,
+      "detail": {
+        "unique": 233,
+        "rows": 233,
+        "duplicated_across_or_within_folds": []
+      }
+    },
+    "same_patients_as_manifest": {
+      "passed": true,
+      "detail": {
+        "not_in_manifest": [],
+        "missing_from_predictions": []
+      }
+    },
+    "labels_equal_manifest": {
+      "passed": true,
+      "detail": {
+        "mismatches": []
+      }
+    },
+    "patients_in_the_fold_of_folds_csv": {
+      "passed": true,
+      "detail": {
+        "in_a_different_fold": 0,
+        "examples": [],
+        "not_in_folds_csv": 0
+      }
+    },
+    "probabilities_in_unit_interval": {
+      "passed": true,
+      "detail": null
+    },
+    "confusion_matrix_matches_paper": {
+      "passed": true,
+      "detail": {
+        "observed": {
+          "TP": 90,
+          "FN": 56,
+          "TN": 59,
+          "FP": 28
+        },
+        "paper": {
+          "TP": 90,
+          "FN": 56,
+          "TN": 59,
+          "FP": 28
+        }
+      }
+    },
+    "pooled_auroc_matches_paper": {
+      "passed": true,
+      "detail": {
+        "observed": 0.7037,
+        "paper": 0.704
+      }
+    },
+    "stored_prediction_equals_probability_above_threshold": {
+      "passed": true,
+      "detail": {
+        "disagreements": 0
+      }
+    }
+  },
+  "passed": true
+}

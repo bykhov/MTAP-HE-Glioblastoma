@@ -1,0 +1,5 @@
+patient_id,sample,sample_type,file_id,mtap_copy_number,cdkn2a_copy_number
+TCGA-06-0152,TCGA-06-0152-01A,Primary Tumor,c22d0cfb-2047-4702-a2a6-061e035af74f,4.0,4.0
+TCGA-06-0152,TCGA-06-0152-02A,Recurrent Tumor,7fc7bf15-43d1-4022-8f2f-77d704d6bbed,0.0,0.0
+TCGA-06-0190,TCGA-06-0190-01A,Primary Tumor,0c1bb3e4-fdac-4825-82cc-cb1f1a104330,1.0,1.0
+TCGA-06-0190,TCGA-06-0190-02A,Recurrent Tumor,7282c556-938d-40cc-a24a-8f198f19a33b,0.0,0.0

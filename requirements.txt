@@ -1,0 +1,34 @@
+# Training and preprocessing pipeline.
+# PyTorch with CUDA 12.1 comes from the PyTorch wheel index:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+# Unpinned packages: the versions used for training were not recorded; the test suite passes with
+# the versions given in the comments.
+
+# --- core numerics / io ---
+numpy==2.4.1
+pandas==2.3.3
+pyarrow            # tested with 25.0.1
+h5py==3.14.0
+PyYAML==6.0.3
+omegaconf==2.3.0
+tqdm==4.67.1
+
+# --- imaging / preprocessing ---
+Pillow==12.1.0
+scikit-image       # tested with 0.26.0
+scikit-learn==1.8.0
+openslide-python==1.4.2
+openslide-bin      # OpenSlide library (not needed if it is already installed)
+
+# --- modelling ---
+torch==2.5.1
+torchvision==0.20.1
+pytorch_lightning==2.6.0
+torchmetrics==1.8.2
+torchmil           # tested with 1.0.2
+timm               # tested with 1.0.27
+huggingface_hub    # tested with 1.14.0; UNI weights are gated: huggingface-cli login
+
+# --- plotting and tests ---
+matplotlib         # tested with 3.10.9
+pytest

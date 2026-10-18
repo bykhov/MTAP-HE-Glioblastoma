@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this code or the deposited predictions, please cite the paper."
+title: "MTAP/9p21 homozygous deletion in glioblastoma H&E whole-slide images"
+type: software
+license: MIT
+repository-code: "https://github.com/bykhov/MTAP-HE-Glioblastoma"
+authors:
+  - family-names: Geva
+    given-names: Rotem
+  - family-names: Sobolev
+    given-names: Danila
+  - family-names: Kidron
+    given-names: Dvora
+  - family-names: Tabach
+    given-names: Yuval
+  - family-names: Hoffer
+    given-names: Oshrit
+  - family-names: Bykhovsky
+    given-names: Dima
+preferred-citation:
+  type: article
+  title: "Routine H&E whole-slide images of glioblastoma carry a detectable signal of MTAP/9p21 homozygous deletion"
+  authors:
+    - family-names: Geva
+      given-names: Rotem
+    - family-names: Sobolev
+      given-names: Danila
+    - family-names: Kidron
+      given-names: Dvora
+    - family-names: Tabach
+      given-names: Yuval
+    - family-names: Hoffer
+      given-names: Oshrit
+    - family-names: Bykhovsky
+      given-names: Dima

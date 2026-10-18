@@ -1,0 +1,33 @@
+# Slides, tiles, features, checkpoints
+*.svs
+*.tif
+*.tiff
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.npy
+*.pickle
+*.pkl
+raw_data/
+patches/
+20xNormalizedPatches/
+mask/
+clustering_results/
+
+# Run outputs; the deposited predictions and the summary tables are tracked
+outputs/*
+!outputs/published/
+!outputs/folds.csv
+!outputs/*.json
+!outputs/*.csv
+lightning_logs/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.env

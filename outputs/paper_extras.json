@@ -1,0 +1,787 @@
+{
+  "n_patients": 233,
+  "cross_fitted": {
+    "youden_thresholds_by_test_fold": {
+      "0": 0.466,
+      "1": 0.371,
+      "2": 0.466,
+      "3": 0.476,
+      "4": 0.466
+    },
+    "youden": {
+      "confusion_matrix": {
+        "TP": 108,
+        "FN": 38,
+        "TN": 46,
+        "FP": 41
+      },
+      "sensitivity": {
+        "value": 0.74,
+        "ci95": [
+          0.664,
+          0.806
+        ],
+        "x": 108,
+        "n": 146
+      },
+      "specificity": {
+        "value": 0.529,
+        "ci95": [
+          0.424,
+          0.631
+        ],
+        "x": 46,
+        "n": 87
+      },
+      "ppv": {
+        "value": 0.725,
+        "ci95": [
+          0.649,
+          0.792
+        ],
+        "x": 108,
+        "n": 149
+      },
+      "npv": {
+        "value": 0.548,
+        "ci95": [
+          0.441,
+          0.651
+        ],
+        "x": 46,
+        "n": 84
+      },
+      "accuracy": {
+        "value": 0.661,
+        "ci95": [
+          0.598,
+          0.719
+        ],
+        "x": 154,
+        "n": 233
+      },
+      "balanced_accuracy": 0.634,
+      "f1": 0.732,
+      "accuracy_vs_majority_binomial_one_sided_p": 0.155
+    },
+    "platt_at_0.5": {
+      "confusion_matrix": {
+        "TP": 131,
+        "FN": 15,
+        "TN": 28,
+        "FP": 59
+      },
+      "sensitivity": {
+        "value": 0.897,
+        "ci95": [
+          0.84,
+          0.939
+        ],
+        "x": 131,
+        "n": 146
+      },
+      "specificity": {
+        "value": 0.322,
+        "ci95": [
+          0.231,
+          0.425
+        ],
+        "x": 28,
+        "n": 87
+      },
+      "ppv": {
+        "value": 0.689,
+        "ci95": [
+          0.621,
+          0.752
+        ],
+        "x": 131,
+        "n": 190
+      },
+      "npv": {
+        "value": 0.651,
+        "ci95": [
+          0.503,
+          0.78
+        ],
+        "x": 28,
+        "n": 43
+      },
+      "accuracy": {
+        "value": 0.682,
+        "ci95": [
+          0.621,
+          0.74
+        ],
+        "x": 159,
+        "n": 233
+      },
+      "balanced_accuracy": 0.61,
+      "f1": 0.78,
+      "accuracy_vs_majority_binomial_one_sided_p": 0.0441
+    },
+    "platt_calibration": {
+      "mean_predicted": 0.626,
+      "prevalence": 0.627,
+      "brier": 0.2092,
+      "calibration_intercept": 0.003,
+      "calibration_slope": 0.976
+    },
+    "platt_auroc_pooled": 0.702,
+    "published_threshold_0.5": {
+      "confusion_matrix": {
+        "TP": 90,
+        "FN": 56,
+        "TN": 59,
+        "FP": 28
+      },
+      "sensitivity": {
+        "value": 0.616,
+        "ci95": [
+          0.536,
+          0.692
+        ],
+        "x": 90,
+        "n": 146
+      },
+      "specificity": {
+        "value": 0.678,
+        "ci95": [
+          0.575,
+          0.769
+        ],
+        "x": 59,
+        "n": 87
+      },
+      "ppv": {
+        "value": 0.763,
+        "ci95": [
+          0.68,
+          0.832
+        ],
+        "x": 90,
+        "n": 118
+      },
+      "npv": {
+        "value": 0.513,
+        "ci95": [
+          0.422,
+          0.603
+        ],
+        "x": 59,
+        "n": 115
+      },
+      "accuracy": {
+        "value": 0.639,
+        "ci95": [
+          0.576,
+          0.699
+        ],
+        "x": 149,
+        "n": 233
+      },
+      "balanced_accuracy": 0.647,
+      "f1": 0.682,
+      "accuracy_vs_majority_binomial_one_sided_p": 0.369
+    },
+    "always_HD": {
+      "confusion_matrix": {
+        "TP": 146,
+        "FN": 0,
+        "TN": 0,
+        "FP": 87
+      },
+      "sensitivity": {
+        "value": 1.0,
+        "ci95": [
+          0.983,
+          1.0
+        ],
+        "x": 146,
+        "n": 146
+      },
+      "specificity": {
+        "value": 0.0,
+        "ci95": [
+          0.0,
+          0.028
+        ],
+        "x": 0,
+        "n": 87
+      },
+      "ppv": {
+        "value": 0.627,
+        "ci95": [
+          0.563,
+          0.687
+        ],
+        "x": 146,
+        "n": 233
+      },
+      "npv": {
+        "value": null,
+        "ci95": [
+          null,
+          null
+        ],
+        "x": 0,
+        "n": 0
+      },
+      "accuracy": {
+        "value": 0.627,
+        "ci95": [
+          0.563,
+          0.687
+        ],
+        "x": 146,
+        "n": 233
+      },
+      "balanced_accuracy": 0.5,
+      "f1": 0.77,
+      "accuracy_vs_majority_binomial_one_sided_p": 0.529
+    }
+  },
+  "fold_scale": {
+    "pooled_raw": {
+      "auroc": 0.704,
+      "ci95": [
+        0.637,
+        0.77
+      ],
+      "n_HD": 146,
+      "n_neutral": 87
+    },
+    "pooled_within_fold_z": {
+      "auroc": 0.714,
+      "ci95": [
+        0.649,
+        0.78
+      ],
+      "n_HD": 146,
+      "n_neutral": 87
+    },
+    "mean_per_fold": 0.716,
+    "fold_mean_logit": {
+      "0": 0.081,
+      "1": -0.023,
+      "2": 0.093,
+      "3": -0.099,
+      "4": -0.051
+    }
+  },
+  "incremental": {
+    "covariates": [
+      "age",
+      "expression_subtype"
+    ],
+    "n": 218,
+    "n_HD": 138,
+    "oof_auroc_clinical": {
+      "auroc": 0.768,
+      "ci95": [
+        0.707,
+        0.83
+      ],
+      "n_HD": 138,
+      "n_neutral": 80
+    },
+    "oof_auroc_image": {
+      "auroc": 0.709,
+      "ci95": [
+        0.641,
+        0.777
+      ],
+      "n_HD": 138,
+      "n_neutral": 80
+    },
+    "oof_auroc_clinical_plus_image": {
+      "auroc": 0.782,
+      "ci95": [
+        0.722,
+        0.842
+      ],
+      "n_HD": 138,
+      "n_neutral": 80
+    },
+    "oof_auroc_difference": 0.014,
+    "oof_auroc_difference_ci95_bootstrap": [
+      -0.012,
+      0.038
+    ],
+    "lr_chi2_in_sample": 8.01,
+    "lr_p_in_sample": 0.00465
+  },
+  "incremental_age": {
+    "covariates": [
+      "age"
+    ],
+    "n": 233,
+    "n_HD": 146,
+    "oof_auroc_clinical": {
+      "auroc": 0.642,
+      "ci95": [
+        0.571,
+        0.713
+      ],
+      "n_HD": 146,
+      "n_neutral": 87
+    },
+    "oof_auroc_image": {
+      "auroc": 0.702,
+      "ci95": [
+        0.636,
+        0.769
+      ],
+      "n_HD": 146,
+      "n_neutral": 87
+    },
+    "oof_auroc_clinical_plus_image": {
+      "auroc": 0.73,
+      "ci95": [
+        0.666,
+        0.793
+      ],
+      "n_HD": 146,
+      "n_neutral": 87
+    },
+    "oof_auroc_difference": 0.087,
+    "oof_auroc_difference_ci95_bootstrap": [
+      0.021,
+      0.148
+    ],
+    "lr_chi2_in_sample": 20.61,
+    "lr_p_in_sample": 5.62e-06
+  },
+  "incremental_extended": {
+    "covariates": [
+      "age",
+      "expression_subtype",
+      "purity",
+      "egfr_amp"
+    ],
+    "n": 215,
+    "n_HD": 135,
+    "oof_auroc_clinical": {
+      "auroc": 0.792,
+      "ci95": [
+        0.733,
+        0.851
+      ],
+      "n_HD": 135,
+      "n_neutral": 80
+    },
+    "oof_auroc_image": {
+      "auroc": 0.709,
+      "ci95": [
+        0.64,
+        0.777
+      ],
+      "n_HD": 135,
+      "n_neutral": 80
+    },
+    "oof_auroc_clinical_plus_image": {
+      "auroc": 0.801,
+      "ci95": [
+        0.743,
+        0.858
+      ],
+      "n_HD": 135,
+      "n_neutral": 80
+    },
+    "oof_auroc_difference": 0.009,
+    "oof_auroc_difference_ci95_bootstrap": [
+      -0.012,
+      0.031
+    ],
+    "lr_chi2_in_sample": 5.63,
+    "lr_p_in_sample": 0.0176
+  },
+  "purity": {
+    "n": 224,
+    "median_HD": 0.78,
+    "median_neutral": 0.8,
+    "mannwhitney_p": 0.689,
+    "auroc_alone": {
+      "auroc": 0.484,
+      "ci95": [
+        0.406,
+        0.562
+      ],
+      "n_HD": 139,
+      "n_neutral": 85
+    },
+    "spearman_purity_vs_probability": 0.034,
+    "model_auroc_purity_stratified": 0.698,
+    "pairs": 3929,
+    "model_auroc_purity_stratified_ci95": [
+      0.623,
+      0.769
+    ],
+    "model_auroc_overall_same_patients": {
+      "auroc": 0.699,
+      "ci95": [
+        0.631,
+        0.767
+      ],
+      "n_HD": 139,
+      "n_neutral": 85
+    },
+    "lr_logit_added_to_purity_chi2": 22.15,
+    "lr_p": 2.52e-06
+  },
+  "egfr": {
+    "n": 232,
+    "amplified_HD": "98 of 145",
+    "amplified_neutral": "25 of 87",
+    "fisher_p": 8.88e-09,
+    "model_auroc_egfr_amplified": {
+      "auroc": 0.73,
+      "ci95": [
+        0.63,
+        0.829
+      ],
+      "n_HD": 98,
+      "n_neutral": 25
+    },
+    "model_auroc_egfr_not_amplified": {
+      "auroc": 0.606,
+      "ci95": [
+        0.498,
+        0.713
+      ],
+      "n_HD": 47,
+      "n_neutral": 62
+    },
+    "model_auroc_egfr_stratified": 0.662,
+    "pairs": 5364,
+    "model_auroc_egfr_stratified_ci95": [
+      0.576,
+      0.743
+    ]
+  },
+  "survival": {
+    "n": 232,
+    "events": 191,
+    "median_os_months_all": 14.2,
+    "km_by_score_median_split": {
+      "median_os_high_score": 13.9,
+      "median_os_low_score": 14.7,
+      "logrank_chi2": 0.28,
+      "logrank_p": 0.599
+    },
+    "km_by_label": {
+      "median_os_HD": 13.3,
+      "median_os_neutral": 15.0,
+      "logrank_chi2": 1.1,
+      "logrank_p": 0.293
+    },
+    "cox_score_per_sd": {
+      "score_z": {
+        "hr": 1.073,
+        "ci95": [
+          0.93,
+          1.239
+        ],
+        "p": 0.334
+      },
+      "n": 232,
+      "events": 191
+    },
+    "cox_label": {
+      "label": {
+        "hr": 1.171,
+        "ci95": [
+          0.872,
+          1.571
+        ],
+        "p": 0.294
+      },
+      "n": 232,
+      "events": 191
+    },
+    "cox_score_label_age": {
+      "score_z": {
+        "hr": 1.031,
+        "ci95": [
+          0.882,
+          1.205
+        ],
+        "p": 0.7
+      },
+      "label": {
+        "hr": 0.968,
+        "ci95": [
+          0.709,
+          1.322
+        ],
+        "p": 0.838
+      },
+      "age_per_10y": {
+        "hr": 1.35,
+        "ci95": [
+          1.203,
+          1.515
+        ],
+        "p": 3.41e-07
+      },
+      "n": 232,
+      "events": 191
+    },
+    "cox_score_label_age_idh_wt_only": {
+      "score_z": {
+        "hr": 1.034,
+        "ci95": [
+          0.866,
+          1.235
+        ],
+        "p": 0.711
+      },
+      "label": {
+        "hr": 1.049,
+        "ci95": [
+          0.732,
+          1.502
+        ],
+        "p": 0.796
+      },
+      "age_per_10y": {
+        "hr": 1.323,
+        "ci95": [
+          1.151,
+          1.521
+        ],
+        "p": 8.23e-05
+      },
+      "n": 181,
+      "events": 148
+    }
+  },
+  "cohort": {
+    "ambiguous_copy_number_files": [
+      {
+        "patient_id": "TCGA-06-0152",
+        "sample": "TCGA-06-0152-01A",
+        "sample_type": "Primary Tumor",
+        "file_id": "c22d0cfb-2047-4702-a2a6-061e035af74f",
+        "mtap_copy_number": 4.0,
+        "cdkn2a_copy_number": 4.0
+      },
+      {
+        "patient_id": "TCGA-06-0152",
+        "sample": "TCGA-06-0152-02A",
+        "sample_type": "Recurrent Tumor",
+        "file_id": "7fc7bf15-43d1-4022-8f2f-77d704d6bbed",
+        "mtap_copy_number": 0.0,
+        "cdkn2a_copy_number": 0.0
+      },
+      {
+        "patient_id": "TCGA-06-0190",
+        "sample": "TCGA-06-0190-01A",
+        "sample_type": "Primary Tumor",
+        "file_id": "0c1bb3e4-fdac-4825-82cc-cb1f1a104330",
+        "mtap_copy_number": 1.0,
+        "cdkn2a_copy_number": 1.0
+      },
+      {
+        "patient_id": "TCGA-06-0190",
+        "sample": "TCGA-06-0190-02A",
+        "sample_type": "Recurrent Tumor",
+        "file_id": "7282c556-938d-40cc-a24a-8f198f19a33b",
+        "mtap_copy_number": 0.0,
+        "cdkn2a_copy_number": 0.0
+      }
+    ],
+    "excluded_for_sensitivity": [
+      "TCGA-06-0152",
+      "TCGA-06-0190"
+    ],
+    "sensitivity_without_recurrent_only_hd": {
+      "auroc": 0.709,
+      "ci95": [
+        0.643,
+        0.775
+      ],
+      "n_HD": 144,
+      "n_neutral": 87,
+      "threshold_0.5": {
+        "confusion_matrix": {
+          "TP": 90,
+          "FN": 54,
+          "TN": 59,
+          "FP": 28
+        },
+        "sensitivity": {
+          "value": 0.625,
+          "ci95": [
+            0.544,
+            0.701
+          ],
+          "x": 90,
+          "n": 144
+        },
+        "specificity": {
+          "value": 0.678,
+          "ci95": [
+            0.575,
+            0.769
+          ],
+          "x": 59,
+          "n": 87
+        },
+        "ppv": {
+          "value": 0.763,
+          "ci95": [
+            0.68,
+            0.832
+          ],
+          "x": 90,
+          "n": 118
+        },
+        "npv": {
+          "value": 0.522,
+          "ci95": [
+            0.43,
+            0.613
+          ],
+          "x": 59,
+          "n": 113
+        },
+        "accuracy": {
+          "value": 0.645,
+          "ci95": [
+            0.582,
+            0.705
+          ],
+          "x": 149,
+          "n": 231
+        },
+        "balanced_accuracy": 0.652,
+        "f1": 0.687,
+        "accuracy_vs_majority_binomial_one_sided_p": 0.272
+      }
+    },
+    "eligible_not_in_cohort": {
+      "n": 33,
+      "by_copy_number_and_slide_table": {
+        "cn0_not_tiled": 18,
+        "cn0_tiled": 5,
+        "cn2_not_tiled": 6,
+        "cn2_tiled": 4
+      },
+      "fisher_p_vs_cohort": 0.563
+    },
+    "gdc_dx_slides_of_cohort_patients": 546
+  },
+  "robustness": [
+    {
+      "group": "All patients",
+      "row": "All patients",
+      "auroc": 0.704,
+      "lo": 0.637,
+      "hi": 0.77,
+      "n": 233,
+      "kind": "subset",
+      "ci": "Hanley-McNeil"
+    },
+    {
+      "group": "Technical",
+      "row": "Same tissue source site",
+      "auroc": 0.702,
+      "lo": 0.612,
+      "hi": 0.781,
+      "n": 233,
+      "kind": "within strata (1684 pairs)",
+      "ci": "bootstrap"
+    },
+    {
+      "group": "Technical",
+      "row": "Same tile-count tertile",
+      "auroc": 0.708,
+      "lo": 0.636,
+      "hi": 0.776,
+      "n": 233,
+      "kind": "within strata (4206 pairs)",
+      "ci": "bootstrap"
+    },
+    {
+      "group": "Technical",
+      "row": "One slide only",
+      "auroc": 0.651,
+      "lo": 0.549,
+      "hi": 0.753,
+      "n": 113,
+      "kind": "subset",
+      "ci": "Hanley-McNeil"
+    },
+    {
+      "group": "Technical",
+      "row": "Primary-tumor copy number only",
+      "auroc": 0.709,
+      "lo": 0.643,
+      "hi": 0.775,
+      "n": 231,
+      "kind": "subset",
+      "ci": "Hanley-McNeil"
+    },
+    {
+      "group": "Clinical and molecular",
+      "row": "Same age tertile",
+      "auroc": 0.702,
+      "lo": 0.625,
+      "hi": 0.773,
+      "n": 233,
+      "kind": "within strata (4012 pairs)",
+      "ci": "bootstrap"
+    },
+    {
+      "group": "Clinical and molecular",
+      "row": "IDH-wild-type",
+      "auroc": 0.713,
+      "lo": 0.638,
+      "hi": 0.788,
+      "n": 181,
+      "kind": "subset",
+      "ci": "Hanley-McNeil"
+    },
+    {
+      "group": "Clinical and molecular",
+      "row": "Excluding IDH-mutant or G-CIMP",
+      "auroc": 0.698,
+      "lo": 0.629,
+      "hi": 0.768,
+      "n": 219,
+      "kind": "subset",
+      "ci": "Hanley-McNeil"
+    },
+    {
+      "group": "Clinical and molecular",
+      "row": "Same purity tertile",
+      "auroc": 0.698,
+      "lo": 0.623,
+      "hi": 0.769,
+      "n": 224,
+      "kind": "within strata (3929 pairs)",
+      "ci": "bootstrap"
+    },
+    {
+      "group": "Clinical and molecular",
+      "row": "Same EGFR status",
+      "auroc": 0.662,
+      "lo": 0.576,
+      "hi": 0.743,
+      "n": 232,
+      "kind": "within strata (5364 pairs)",
+      "ci": "bootstrap"
+    },
+    {
+      "group": "Expression program",
+      "row": "Same transcriptional subtype",
+      "auroc": 0.662,
+      "lo": 0.561,
+      "hi": 0.753,
+      "n": 218,
+      "kind": "within strata (2077 pairs)",
+      "ci": "bootstrap"
+    }
+  ]
+}

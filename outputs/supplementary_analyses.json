@@ -1,0 +1,433 @@
+{
+  "n_patients": 233,
+  "n_HD": 146,
+  "slides_per_patient": {
+    "total_slides": 515,
+    "all": {
+      "n": 233,
+      "mean": 2.21,
+      "sd": 1.6,
+      "median": 2.0,
+      "q1": 1.0,
+      "q3": 3.0,
+      "min": 1.0,
+      "max": 9.0
+    },
+    "HD": {
+      "n": 146,
+      "mean": 2.23,
+      "sd": 1.67,
+      "median": 1.5,
+      "q1": 1.0,
+      "q3": 3.0,
+      "min": 1.0,
+      "max": 9.0
+    },
+    "neutral": {
+      "n": 87,
+      "mean": 2.18,
+      "sd": 1.47,
+      "median": 2.0,
+      "q1": 1.0,
+      "q3": 3.0,
+      "min": 1.0,
+      "max": 7.0
+    },
+    "mann_whitney_p": 0.802,
+    "counts": {
+      "1": 113,
+      "2": 46,
+      "3": 29,
+      "4": 21,
+      "5": 14,
+      "6": 4,
+      "7": 4,
+      "8": 1,
+      "9": 1
+    }
+  },
+  "auroc_by_slide_count": {
+    "one_slide": {
+      "n": 113,
+      "n_HD": 73,
+      "n_neutral": 40,
+      "auroc": 0.651,
+      "ci95": [
+        0.549,
+        0.753
+      ],
+      "median_tiles": 1629.0
+    },
+    "more_than_one_slide": {
+      "n": 120,
+      "n_HD": 73,
+      "n_neutral": 47,
+      "auroc": 0.755,
+      "ci95": [
+        0.669,
+        0.84
+      ],
+      "median_tiles": 5844.0
+    },
+    "difference": 0.104,
+    "z": 1.53,
+    "p_two_sided": 0.126
+  },
+  "operating_points": {
+    "rule_out": [
+      {
+        "target_sensitivity": 0.8,
+        "threshold": 0.4058,
+        "sensitivity": 0.801,
+        "specificity": 0.448,
+        "TP": 117,
+        "FN": 29,
+        "TN": 39,
+        "FP": 48,
+        "called_neutral": 68,
+        "called_neutral_fraction": 0.292,
+        "npv": 0.574,
+        "ppv": 0.709
+      },
+      {
+        "target_sensitivity": 0.9,
+        "threshold": 0.3137,
+        "sensitivity": 0.904,
+        "specificity": 0.322,
+        "TP": 132,
+        "FN": 14,
+        "TN": 28,
+        "FP": 59,
+        "called_neutral": 42,
+        "called_neutral_fraction": 0.18,
+        "npv": 0.667,
+        "ppv": 0.691
+      },
+      {
+        "target_sensitivity": 0.95,
+        "threshold": 0.2278,
+        "sensitivity": 0.952,
+        "specificity": 0.172,
+        "TP": 139,
+        "FN": 7,
+        "TN": 15,
+        "FP": 72,
+        "called_neutral": 22,
+        "called_neutral_fraction": 0.094,
+        "npv": 0.682,
+        "ppv": 0.659
+      }
+    ],
+    "rule_in": [
+      {
+        "target_specificity": 0.9,
+        "threshold": 0.603,
+        "sensitivity": 0.349,
+        "specificity": 0.908,
+        "TP": 51,
+        "FN": 95,
+        "TN": 79,
+        "FP": 8,
+        "called_neutral": 174,
+        "called_neutral_fraction": 0.747,
+        "npv": 0.454,
+        "ppv": 0.864
+      },
+      {
+        "target_specificity": 0.95,
+        "threshold": 0.771,
+        "sensitivity": 0.123,
+        "specificity": 0.954,
+        "TP": 18,
+        "FN": 128,
+        "TN": 83,
+        "FP": 4,
+        "called_neutral": 211,
+        "called_neutral_fraction": 0.906,
+        "npv": 0.393,
+        "ppv": 0.818
+      }
+    ]
+  },
+  "per_fold_auroc": [
+    {
+      "fold": 0,
+      "n": 47,
+      "n_HD": 29,
+      "n_neutral": 18,
+      "auroc": 0.707,
+      "ci95_low": 0.559,
+      "ci95_high": 0.855
+    },
+    {
+      "fold": 1,
+      "n": 47,
+      "n_HD": 30,
+      "n_neutral": 17,
+      "auroc": 0.694,
+      "ci95_low": 0.543,
+      "ci95_high": 0.846
+    },
+    {
+      "fold": 2,
+      "n": 46,
+      "n_HD": 29,
+      "n_neutral": 17,
+      "auroc": 0.755,
+      "ci95_low": 0.616,
+      "ci95_high": 0.894
+    },
+    {
+      "fold": 3,
+      "n": 46,
+      "n_HD": 29,
+      "n_neutral": 17,
+      "auroc": 0.68,
+      "ci95_low": 0.524,
+      "ci95_high": 0.835
+    },
+    {
+      "fold": 4,
+      "n": 47,
+      "n_HD": 29,
+      "n_neutral": 18,
+      "auroc": 0.745,
+      "ci95_low": 0.606,
+      "ci95_high": 0.885
+    }
+  ],
+  "per_fold_auroc_mean": 0.716,
+  "per_fold_auroc_sd": 0.0325,
+  "calibration": {
+    "prevalence": 0.627,
+    "mean_predicted": 0.499,
+    "brier": 0.2259,
+    "brier_prevalence_only": 0.234,
+    "brier_skill": 0.035,
+    "calibration_intercept": 0.61,
+    "calibration_slope": 0.8,
+    "calibration_slope_intercept": 0.58,
+    "bins": [
+      {
+        "bin": "(0.061, 0.341]",
+        "n": 47,
+        "mean_predicted": 0.227,
+        "observed_HD": 0.34,
+        "ci95": [
+          0.218,
+          0.482
+        ]
+      },
+      {
+        "bin": "(0.341, 0.463]",
+        "n": 47,
+        "mean_predicted": 0.406,
+        "observed_HD": 0.532,
+        "ci95": [
+          0.391,
+          0.669
+        ]
+      },
+      {
+        "bin": "(0.463, 0.536]",
+        "n": 46,
+        "mean_predicted": 0.505,
+        "observed_HD": 0.739,
+        "ci95": [
+          0.6,
+          0.849
+        ]
+      },
+      {
+        "bin": "(0.536, 0.646]",
+        "n": 46,
+        "mean_predicted": 0.583,
+        "observed_HD": 0.652,
+        "ci95": [
+          0.509,
+          0.777
+        ]
+      },
+      {
+        "bin": "(0.646, 0.914]",
+        "n": 47,
+        "mean_predicted": 0.774,
+        "observed_HD": 0.872,
+        "ci95": [
+          0.756,
+          0.945
+        ]
+      }
+    ]
+  },
+  "cohort_table": [
+    {
+      "characteristic": "Patients, n",
+      "all": "233",
+      "HD": "146",
+      "neutral": "87",
+      "p": NaN,
+      "test": "",
+      "missing": 0.0
+    },
+    {
+      "characteristic": "Age at diagnosis, years, median (IQR)",
+      "all": "59 (49-67)",
+      "HD": "61 (52-69)",
+      "neutral": "54 (44-62)",
+      "p": 0.00019,
+      "test": "Mann-Whitney U",
+      "missing": 0.0
+    },
+    {
+      "characteristic": "Male sex, n (%)",
+      "all": "150 (64%)",
+      "HD": "92 (63%)",
+      "neutral": "58 (67%)",
+      "p": 0.67,
+      "test": "Fisher exact",
+      "missing": 0.0
+    },
+    {
+      "characteristic": "Expression subtype, n (% of known)",
+      "all": "",
+      "HD": "",
+      "neutral": "",
+      "p": 1.3e-07,
+      "test": "chi-square, 4 df",
+      "missing": 15.0
+    },
+    {
+      "characteristic": "  Classical",
+      "all": "76 (35%)",
+      "HD": "65 (47%)",
+      "neutral": "11 (14%)",
+      "p": NaN,
+      "test": "",
+      "missing": NaN
+    },
+    {
+      "characteristic": "  G-CIMP",
+      "all": "13 (6%)",
+      "HD": "3 (2%)",
+      "neutral": "10 (12%)",
+      "p": NaN,
+      "test": "",
+      "missing": NaN
+    },
+    {
+      "characteristic": "  Mesenchymal",
+      "all": "50 (23%)",
+      "HD": "29 (21%)",
+      "neutral": "21 (26%)",
+      "p": NaN,
+      "test": "",
+      "missing": NaN
+    },
+    {
+      "characteristic": "  Neural",
+      "all": "35 (16%)",
+      "HD": "24 (17%)",
+      "neutral": "11 (14%)",
+      "p": NaN,
+      "test": "",
+      "missing": NaN
+    },
+    {
+      "characteristic": "  Proneural",
+      "all": "44 (20%)",
+      "HD": "17 (12%)",
+      "neutral": "27 (34%)",
+      "p": NaN,
+      "test": "",
+      "missing": NaN
+    },
+    {
+      "characteristic": "IDH-mutant, n of tested",
+      "all": "9 of 190",
+      "HD": "3 of 122",
+      "neutral": "6 of 68",
+      "p": 0.072,
+      "test": "Fisher exact",
+      "missing": 43.0
+    },
+    {
+      "characteristic": "Slides per patient, median (IQR)",
+      "all": "2 (1-3)",
+      "HD": "2 (1-3)",
+      "neutral": "2 (1-3)",
+      "p": 0.8,
+      "test": "Mann-Whitney U",
+      "missing": 0.0
+    },
+    {
+      "characteristic": "Tiles per patient, median (IQR)",
+      "all": "3080 (1320-6409)",
+      "HD": "2985 (1332-6854)",
+      "neutral": "3174 (1310-5764)",
+      "p": 0.86,
+      "test": "Mann-Whitney U",
+      "missing": 0.0
+    },
+    {
+      "characteristic": "Tissue source sites, n",
+      "all": "15",
+      "HD": "15",
+      "neutral": "12",
+      "p": NaN,
+      "test": "",
+      "missing": 0.0
+    }
+  ],
+  "covariate_checks": {
+    "age": {
+      "auroc_alone": 0.646,
+      "auroc_alone_ci95": [
+        0.576,
+        0.717
+      ],
+      "tertile_cuts": [
+        52.3,
+        64.0
+      ],
+      "model_auroc_age_stratified": 0.702,
+      "pairs": 4012,
+      "model_auroc_age_stratified_ci95": [
+        0.625,
+        0.773
+      ]
+    },
+    "expression_subtype": {
+      "n_known": 218,
+      "auroc_alone_loo": 0.645,
+      "model_auroc_subtype_stratified": 0.662,
+      "pairs": 2077,
+      "model_auroc_subtype_stratified_ci95": [
+        0.561,
+        0.753
+      ],
+      "model_auroc_within_subtype": {
+        "Classical": 0.655,
+        "G-CIMP": 0.8,
+        "Mesenchymal": 0.741,
+        "Neural": 0.746,
+        "Proneural": 0.514
+      },
+      "model_auroc_without_gcimp": 0.704,
+      "without_gcimp_n_HD": 135,
+      "without_gcimp_n_neutral": 70,
+      "model_auroc_without_gcimp_ci95": [
+        0.633,
+        0.776
+      ]
+    },
+    "incremental": {
+      "n": 218,
+      "auroc_age_subtype_in_sample": 0.776,
+      "auroc_age_subtype_model_in_sample": 0.798,
+      "lr_chi2": 8.01,
+      "lr_p": 0.0047,
+      "model_logit_coef": 0.531
+    }
+  }
+}

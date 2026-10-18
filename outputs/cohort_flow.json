@@ -1,0 +1,75 @@
+{
+  "steps": [
+    {
+      "step": "TCGA-GBM cases with an ABSOLUTE LiftOver gene-level copy-number file (MTAP row found)",
+      "patients": 562
+    },
+    {
+      "step": "of these, MTAP copy number 0 or 2",
+      "patients": 397,
+      "copy_number_0_HD": 251,
+      "copy_number_2_neutral": 146
+    },
+    {
+      "step": "of these, with a diagnostic (DX) slide on the GDC",
+      "patients": 265,
+      "copy_number_0_HD": 168,
+      "copy_number_2_neutral": 97
+    },
+    {
+      "step": "patients in the slide table (any copy number)",
+      "patients": 337
+    },
+    {
+      "step": "analysed cohort (patient manifest)",
+      "patients": 233,
+      "HD": 146,
+      "neutral": 87
+    }
+  ],
+  "cases_with_diagnostic_slide_and_cn_0_or_2_not_in_slide_table": 24,
+  "slide_table_patients_outside_the_cohort": {
+    "n": 104,
+    "by_mtap_copy_number": {
+      "0": 5,
+      "1": 76,
+      "2": 4,
+      "3": 7,
+      "4": 8,
+      "5": 2,
+      "6": 2
+    },
+    "copy_number_0_HD": [
+      "TCGA-06-0221",
+      "TCGA-06-1802",
+      "TCGA-08-0509",
+      "TCGA-14-0787",
+      "TCGA-19-1386"
+    ],
+    "copy_number_2": 4,
+    "copy_number_not_0_or_2": 95,
+    "slide_table_label_1": [
+      "TCGA-06-1802",
+      "TCGA-08-0509",
+      "TCGA-14-0787",
+      "TCGA-19-1386"
+    ]
+  },
+  "cohort_label_disagreements": {
+    "n": 1,
+    "patients": [
+      {
+        "patient_id": "TCGA-06-0190",
+        "copy_number": 1,
+        "cohort_label": 1.0
+      }
+    ]
+  },
+  "cohort_patients_without_copy_number_file": [],
+  "cohort_patients_with_ambiguous_copy_number": [
+    "TCGA-06-0152",
+    "TCGA-06-0190"
+  ],
+  "workflow": "ABSOLUTE LiftOver",
+  "labelling_rule": "label 1 if MTAP copy_number == 0, else 0 (create_data_summary.py)"
+}

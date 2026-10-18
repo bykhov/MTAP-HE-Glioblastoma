@@ -1,0 +1,76 @@
+# Training configuration (5-fold cross-validation). Run from the repository root: python run.py
+seed: 42
+pipeline: "lightning"
+
+# Data configuration
+data:
+  # Patient-level manifest written by create_patient_h5s.py (path relative to the repository root)
+  parquet_path: "source/precomputed_features/uni-patient-level/feature_manifest.parquet"
+  case_id_col: "patient_id"
+  bag_id_col: "patient_id" # one bag per patient
+  label_col: "patient_label"
+  feature_h5_path_col: "patient_h5_path"
+  val_split: 0.10
+  test_split: 0.10
+  k_folds: 5
+  # null: the folds are computed from the manifest (seed, label, patch-count bucket).
+  # A path to a folds file (e.g. outputs/folds.csv) fixes the split to that file.
+  folds_csv: null
+  max_bag_size_for_train: 4096
+
+# DataModule configuration
+datamodule:
+  batch_size: 16
+  num_workers: 4
+  persistent_workers: True
+  use_weighted_sampler: True
+
+# Model configuration
+model:
+  # CLAM_SB architecture trained with the bag-level loss only (gated attention MIL)
+  name: "clam_sb"
+
+  clam_sb:
+    input_dim: 1024
+    n_classes: 1
+    gated: True
+    att_dim: 8
+    k_sample: 10
+
+# LightningModule configuration
+lit_module:
+  pos_weight: 0.5959
+  # The single classification threshold, used for every metric and for the saved predictions.
+  threshold: 0.5
+  optimizer:
+    name: "AdamW"
+    lr: 0.0001
+    weight_decay: 0.01
+  scheduler:
+    name: "CosineAnnealingLR"
+    params:
+      T_max: 150
+  patch_dropout_rate: 0.0
+  patch_dropout_small_bag_threshold: 500
+
+# Trainer configuration (PyTorch Lightning)
+trainer:
+  max_epochs: 150
+  accelerator: "cuda"
+  devices: 1
+  log_every_n_steps: 10
+  gradient_clip_val: 0.5
+  precision: "16-mixed"
+
+# Early stopping configuration
+early_stopping:
+  monitor: "val/auroc"
+  patience: 50
+  mode: "max"
+
+# Local outputs. Everything for one run goes to <output_dir>/<run_name>/ (checkpoints, CSV logs,
+# fold{k}_test_predictions.csv, fold{k}_val_predictions.csv, attention outputs);
+# the fold assignment goes to <output_dir>/folds.csv.
+logging:
+  run_name: "clam_sb_patient_level"
+  output_dir: "outputs"

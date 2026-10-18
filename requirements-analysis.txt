@@ -1,0 +1,13 @@
+# Analysis scripts (analysis/, scripts/) and the test suite: every table and figure computed from the
+# deposited out-of-fold predictions. CPU only. Python 3.13.
+#   pip install -r requirements-analysis.txt
+
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.7.2
+matplotlib==3.10.9
+Pillow==12.2.0
+pyarrow==25.0.1
+requests==2.34.1
+pytest==9.1.1

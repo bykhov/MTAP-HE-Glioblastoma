@@ -1,0 +1,12 @@
+group,row,auroc,lo,hi,n,kind,ci
+All patients,All patients,0.704,0.637,0.77,233,subset,Hanley-McNeil
+Technical,Same tissue source site,0.702,0.612,0.781,233,within strata (1684 pairs),bootstrap
+Technical,Same tile-count tertile,0.708,0.636,0.776,233,within strata (4206 pairs),bootstrap
+Technical,One slide only,0.651,0.549,0.753,113,subset,Hanley-McNeil
+Technical,Primary-tumor copy number only,0.709,0.643,0.775,231,subset,Hanley-McNeil
+Clinical and molecular,Same age tertile,0.702,0.625,0.773,233,within strata (4012 pairs),bootstrap
+Clinical and molecular,IDH-wild-type,0.713,0.638,0.788,181,subset,Hanley-McNeil
+Clinical and molecular,Excluding IDH-mutant or G-CIMP,0.698,0.629,0.768,219,subset,Hanley-McNeil
+Clinical and molecular,Same purity tertile,0.698,0.623,0.769,224,within strata (3929 pairs),bootstrap
+Clinical and molecular,Same EGFR status,0.662,0.576,0.743,232,within strata (5364 pairs),bootstrap
+Expression program,Same transcriptional subtype,0.662,0.561,0.753,218,within strata (2077 pairs),bootstrap

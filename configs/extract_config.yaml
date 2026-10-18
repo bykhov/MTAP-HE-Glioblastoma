@@ -1,0 +1,30 @@
+# Patch table written by data_preparation_scripts/data_preprocessing/utils/create_data_summary.py
+source_parquet: "source/dataset_v1.parquet"
+image_path_col: "file_path"
+slide_id_col: "slide_id"
+label_col: "is_mtap_mutation"
+patch_id_col: "patch_id"
+
+# Output paths for pre-computed features (slide level).
+# create_patient_h5s.py reads <output_dir>/<output_parquet_name> and writes the patient-level files
+# (default source/precomputed_features/uni-patient-level), which is what configs/train_config.yaml reads.
+output_dir: "source/precomputed_features/uni"
+output_h5_dir: "slides" # Subdirectory for H5 files, created inside output_dir
+output_parquet_name: "feature_manifest.parquet"
+
+# Feature extractor: UNI (ViT-L/16, 1024-d).
+# The weights are gated on Hugging Face (MahmoodLab/uni): run `huggingface-cli login` first.
+# The input transform comes from the model's own pretrained config (each 512 px tile is resized to 224 px).
+feature_extractor:
+  name: "uni"
+  feature_dim: 1024 # Must equal model.clam_sb.input_dim in configs/train_config.yaml
+
+# Processing settings
+batch_size: 256 # Number of patches to process at once
+num_workers: 2
+
+# Hardware settings
+accelerator: "auto"
+devices: "auto"
+
+seed: 42

@@ -1,0 +1,97 @@
+{
+  "n_patients": 233,
+  "n_HD": 146,
+  "n_neutral": 87,
+  "n_slides": 515,
+  "n_tiles": 1115734,
+  "tiles_per_patient": {
+    "n": 233,
+    "median": 3080.0,
+    "iqr": [
+      1320.0,
+      6409.0
+    ],
+    "mean": 4788.557939914163,
+    "min": 101.0,
+    "max": 24495.0
+  },
+  "tiles_per_patient_HD": {
+    "n": 146,
+    "median": 2985.0,
+    "iqr": [
+      1332.5,
+      6854.25
+    ],
+    "mean": 4969.506849315068,
+    "min": 108.0,
+    "max": 24495.0
+  },
+  "tiles_per_patient_neutral": {
+    "n": 87,
+    "median": 3174.0,
+    "iqr": [
+      1310.0,
+      5763.5
+    ],
+    "mean": 4484.896551724138,
+    "min": 101.0,
+    "max": 22189.0
+  },
+  "slides_per_patient": {
+    "1": 113,
+    "2": 46,
+    "3": 29,
+    "4": 21,
+    "5": 14,
+    "6": 4,
+    "7": 4,
+    "8": 1,
+    "9": 1
+  },
+  "n_tissue_source_sites": 15,
+  "table_consistency": {
+    "patients_missing_from_slide_table": 0,
+    "tile_counts_equal_manifest": true,
+    "labels_equal_manifest": true,
+    "labels_constant_within_patient": true,
+    "manifest_patient_ids_unique": true
+  },
+  "observed": {
+    "n_patients": 233,
+    "n_HD": 146,
+    "n_neutral": 87,
+    "n_slides": 515,
+    "n_tiles_after_selection": 1115734,
+    "tiles_median_per_patient": 3080.0,
+    "n_tiles_before_selection_all_patients_in_coordinate_table": 1865844,
+    "n_tiles_before_selection_cohort_patients": 1306781,
+    "n_slides_cohort_patients_in_coordinate_table": 515
+  },
+  "selection_steps": [
+    {
+      "step": "tile coordinate table, all patients (tiles before tissue selection)",
+      "patients": 334,
+      "slides": 745,
+      "tiles": 1865844
+    },
+    {
+      "step": "slide table, all patients (tiles after tissue selection)",
+      "patients": 337,
+      "slides": 748,
+      "tiles": 1589090
+    },
+    {
+      "step": "analysed cohort (patient manifest)",
+      "patients": 233,
+      "slides": 515,
+      "tiles": 1115734
+    }
+  ],
+  "patients_in_slide_table_outside_the_cohort": {
+    "n": 104,
+    "n_HD": 4,
+    "n_neutral": 100,
+    "slides": 233,
+    "tiles": 473356
+  }
+}

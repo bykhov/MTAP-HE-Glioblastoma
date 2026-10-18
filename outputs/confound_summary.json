@@ -1,0 +1,132 @@
+{
+  "n_patients": 233,
+  "n_HD": 146,
+  "n_neutral": 87,
+  "overall": {
+    "n_HD": 146,
+    "n_neutral": 87,
+    "auroc_pooled": 0.704,
+    "auroc_pooled_95ci": [
+      0.637,
+      0.77
+    ]
+  },
+  "tiles": {
+    "median_tiles_all": 3080.0,
+    "iqr_tiles_all": [
+      1320.0,
+      6409.0
+    ],
+    "median_tiles_HD": 2985.0,
+    "median_tiles_neutral": 3174.0,
+    "mannwhitney_p": 0.8580721612221012,
+    "auroc_tilecount_alone": 0.507,
+    "auroc_tilecount_alone_95ci": [
+      0.43,
+      0.581
+    ],
+    "model_auroc_by_tertile": {
+      "low": {
+        "n_HD": 51,
+        "n_neutral": 27,
+        "auroc": 0.662,
+        "ci95": [
+          0.539,
+          0.784
+        ],
+        "tile_range": [
+          101.0,
+          1712.0
+        ]
+      },
+      "mid": {
+        "n_HD": 44,
+        "n_neutral": 33,
+        "auroc": 0.716,
+        "ci95": [
+          0.602,
+          0.829
+        ],
+        "tile_range": [
+          1749.0,
+          4535.0
+        ]
+      },
+      "high": {
+        "n_HD": 51,
+        "n_neutral": 27,
+        "auroc": 0.747,
+        "ci95": [
+          0.639,
+          0.855
+        ],
+        "tile_range": [
+          4596.0,
+          24495.0
+        ]
+      }
+    },
+    "spearman_prob_vs_tiles": -0.065
+  },
+  "site": {
+    "n_sites": 15,
+    "n_sites_both_classes": 12,
+    "largest_site": "06",
+    "largest_site_share": 0.249,
+    "chi2": 13.506,
+    "dof": 14,
+    "chi2_p": 0.48716232380106994,
+    "auroc_site_alone_loo": 0.433,
+    "auroc_site_alone_loo_95ci": [
+      0.354,
+      0.514
+    ],
+    "model_auroc_site_stratified": 0.702,
+    "site_stratified_pairs": 1684,
+    "model_auroc_within_site": {
+      "02": 0.671,
+      "06": 0.711,
+      "08": 0.857,
+      "12": 0.749,
+      "14": 0.663,
+      "15": 1.0,
+      "19": 0.455,
+      "26": 0.72,
+      "27": 0.667,
+      "28": 0.7,
+      "41": 1.0,
+      "81": 1.0
+    },
+    "spearman_site_HDrate_vs_meanprob": 0.322
+  },
+  "idh": {
+    "n_idh_known": 190,
+    "n_idh_unknown": 43,
+    "n_idh_mutant": 9,
+    "idh_mutant_HD": 3,
+    "idh_mutant_neutral": 6,
+    "fisher_p": 0.07172309489223495,
+    "model_auroc_idh_wt": 0.713,
+    "model_auroc_idh_wt_95ci": [
+      0.638,
+      0.788
+    ],
+    "idh_wt_n_HD": 119,
+    "idh_wt_n_neutral": 62,
+    "idh_source_counts": {
+      "pancan_atlas_mutations": 156,
+      "lgggbm_tcga_pub:IDH_STATUS": 34
+    },
+    "n_g_cimp": 13,
+    "n_g_cimp_without_idh_call": 3,
+    "n_g_cimp_idh_wt": 2,
+    "n_idh_mutant_or_g_cimp": 14,
+    "model_auroc_excl_idh_mut_or_g_cimp": 0.698,
+    "model_auroc_excl_idh_mut_or_g_cimp_95ci": [
+      0.629,
+      0.768
+    ],
+    "excl_idh_mut_or_g_cimp_n_HD": 142,
+    "excl_idh_mut_or_g_cimp_n_neutral": 77
+  }
+}
